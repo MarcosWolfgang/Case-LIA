@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIA UFSCar · Painel Estratégico de Oportunidades | Marcos Wolfgang</title>
+  <meta name="description" content="Painel executivo sóbrio para gestão estratégica de oportunidades, agenda de marcos e alocação da equipe da LIA UFSCar. Processo Seletivo Novos Founders · Marcos Wolfgang.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- ====================================================================
+         1. CABEÇALHO EXECUTIVO SÓBRIO (LIA UFSCAR)
+         ==================================================================== -->
+    <header class="executive-header-dark">
+      <div class="header-top-row">
+        <div class="brand-identity">
+          <div class="brand-badge" aria-hidden="true">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            LIA UFSCar
+          </div>
+          <div class="header-text-group">
+            <h1>LIA UFSCar · Painel Estratégico de Oportunidades</h1>
+            <p class="header-subtitle">Processo Seletivo Novos Founders · Marcos Wolfgang</p>
+          </div>
+        </div>
+
+        <div class="header-buttons">
+          <button class="btn-header-dark" id="btnGovInfo" title="Visualizar diretrizes de governança">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Diretrizes de Governança
+          </button>
+          <button class="btn-header-dark" id="btnPrint" title="Exportar versão para impressão ou PDF">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Salvar Relatório PDF
+          </button>
+        </div>
+      </div>
+
+      <!-- Barra de Contexto Superior Sóbria -->
+      <div class="context-bar-dark">
+        <span class="context-bar-text">Semana Base: 28/09/2026 · Capacidade: 6 membros da Liga · Premissa Operacional: Máximo de 1 projeto técnico simultâneo.</span>
+      </div>
+    </header>
+
+    <!-- ====================================================================
+         2. INDICADORES CHAVE (KPIS EXECUTIVOS SÓBRIOS)
+         ==================================================================== -->
+    <section class="kpi-row" aria-label="Indicadores Chave de Gestão">
+      <div class="kpi-card-dark">
+        <div class="kpi-content-left">
+          <span class="kpi-title">Taxa de Alocação Efetiva</span>
+          <div class="kpi-number-group">
+            <span class="kpi-number">100%</span>
+            <span class="kpi-badge-dark neutral">Sem Sobrecarga</span>
+          </div>
+          <span class="kpi-desc">Todos os 6 integrantes alocados sem conflito</span>
+        </div>
+      </div>
+
+      <div class="kpi-card-dark">
+        <div class="kpi-content-left">
+          <span class="kpi-title">Aderência aos Prazos</span>
+          <div class="kpi-number-group">
+            <span class="kpi-number">100%</span>
+            <span class="kpi-badge-dark neutral">6 / 6 Respostas</span>
+          </div>
+          <span class="kpi-desc">Todas as 6 respostas organizadas nos prazos</span>
+        </div>
+      </div>
+
+      <div class="kpi-card-dark">
+        <div class="kpi-content-left">
+          <span class="kpi-title">Pipeline Convertido</span>
+          <div class="kpi-number-group">
+            <span class="kpi-number">66,7%</span>
+            <span class="kpi-badge-dark neutral">4 Entregas 2026</span>
+          </div>
+          <span class="kpi-desc">4 frentes ativas em 2026 e 2 para 2027</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         3. AGENDA DE PRAZOS — OUTUBRO 2026 (SEM VAZAR / LARGURA TOTAL)
+         ==================================================================== -->
+    <section class="agenda-roadmap-section" aria-label="Agenda de Prazos de Outubro 2026">
+      <div class="agenda-roadmap-header">
+        <div class="agenda-header-title-wrap">
+          <h2 class="agenda-heading-text">Agenda de Prazos — Outubro 2026</h2>
+          <span class="agenda-subheading-text">Cronograma de respostas e marcos operacionais</span>
+        </div>
+        
+        <div class="agenda-header-right">
+          <!-- Alternador de Visualização: Modo Semanas vs Modo Calendário -->
+          <div class="agenda-mode-toggle" role="group" aria-label="Alternar modo da agenda">
+            <button class="agenda-toggle-btn active" id="btnAgendaWeeks" type="button" title="Visualizar por colunas semanais">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="5" height="18" rx="1"></rect>
+                <rect x="10" y="3" width="5" height="18" rx="1"></rect>
+                <rect x="17" y="3" width="5" height="18" rx="1"></rect>
+              </svg>
+              Modo Semanas
+            </button>
+            <button class="agenda-toggle-btn" id="btnAgendaMonth" type="button" title="Visualizar em grade de calendário mensal">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              Modo Calendário
+            </button>
+          </div>
+          <span class="agenda-legend-hint">Clique na tag para localizar a organização</span>
+        </div>
+      </div>
+
+      <!-- VISUALIZAÇÃO 1: MODO SEMANAS (ATIVO POR PADRÃO) -->
+      <div class="agenda-columns-grid" id="agendaWeeksContainer">
+        
+        <!-- SEMANA 1: AÇÕES IMEDIATAS (COM DESTAQUE SUAVE DE URGÊNCIA) -->
+        <div class="agenda-week-column week-urgent">
+          <div class="week-column-header">
+            <span class="week-column-title">Semana 1 (28/09 a 02/10)</span>
+            <span class="week-column-tag tag-urgent">Vence Esta Semana</span>
+          </div>
+          <div class="agenda-events-stack">
+            <!-- Evento 1: Meridian -->
+            <div class="agenda-event-row" data-id="meridian" role="button" tabindex="0">
+              <span class="cal-badge-urgent red">[01/OUT]</span>
+              <div class="cal-event-info">
+                <span class="cal-event-org">Meridian Estratégia</span>
+                <span class="cal-event-action">Confirmar oficina presencial de 1 manhã</span>
+              </div>
+            </div>
+
+            <!-- Evento 2: Senda -->
+            <div class="agenda-event-row" data-id="senda" role="button" tabindex="0">
+              <span class="cal-badge-urgent amber">[02/OUT]</span>
+              <div class="cal-event-info">
+                <span class="cal-event-org">Senda Patrimonial</span>
+                <span class="cal-event-action">Alinhar piloto técnico antes da viagem do Theo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANA 2: ALINHAMENTOS & FORMAÇÃO (NEUTRO) -->
+        <div class="agenda-week-column">
+          <div class="week-column-header">
+            <span class="week-column-title">Semana 2 (05/10 a 09/10)</span>
+            <span class="week-column-tag tag-neutral">Alinhamentos</span>
+          </div>
+          <div class="agenda-events-stack">
+            <!-- Evento 3: Violeta -->
+            <div class="agenda-event-row" data-id="violeta" role="button" tabindex="0">
+              <span class="cal-badge-neutral">[05/OUT]</span>
+              <div class="cal-event-info">
+                <span class="cal-event-org">Violeta Financeira</span>
+                <span class="cal-event-action">Call de 30 min com alumni e aula de UX</span>
+              </div>
+            </div>
+
+            <!-- Evento 4: Brava -->
+            <div class="agenda-event-row" data-id="brava" role="button" tabindex="0">
+              <span class="cal-badge-neutral">[07/OUT]</span>
+              <div class="cal-event-info">
+                <span class="cal-event-org">Brava Consultoria</span>
+                <span class="cal-event-action">Confirmar turma de 2 multiplicadores</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEMANA 3: INSTITUCIONAL & 2027 (NEUTRO) -->
+        <div class="agenda-week-column">
+          <div class="week-column-header">
+            <span class="week-column-title">Semana 3 (12/10 a 16/10)</span>
+            <span class="week-column-tag tag-neutral">Institucional</span>
+          </div>
+          <div class="agenda-events-stack">
+            <!-- Evento 5: Prisma -->
+            <div class="agenda-event-row" data-id="prisma" role="button" tabindex="0">
+              <span class="cal-badge-neutral">[15/OUT]</span>
+              <div class="cal-event-info">
+                <span class="cal-event-org">Prisma Estratégica</span>
+                <span class="cal-event-action">Envio de deck institucional (sem desafio)</span>
+              </div>
+            </div>
+
+            <!-- Evento 6: Aerion -->
+            <div class="agenda-event-row" data-id="aerion" role="button" tabindex="0">
+              <span class="cal-badge-neutral">[16/OUT]</span>
+              <div class="cal-event-info">
+                <span class="cal-event-org">Aerion Aeroespacial</span>
+                <span class="cal-event-action">Manifesto formal para visita técnica</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- VISUALIZAÇÃO 2: MODO CALENDÁRIO (GRADE MENSAL COMPLETA DE OUTUBRO/2026 - 31 DIAS) -->
+      <div class="agenda-calendar-month-wrap" id="agendaMonthContainer" style="display: none;">
+        
+        <!-- Barra de Legenda Executiva & Capacidade Livre -->
+        <div class="cal-month-legend-bar">
+          <div class="cal-month-legend-title">
+            <span class="cal-month-badge">Outubro 2026</span>
+            <span class="cal-month-subtext">Visão Mensal Completa (31 Dias) · Balanço entre Entregas e Janelas Livres</span>
+          </div>
+          <div class="cal-legend-pills">
+            <span class="cal-legend-item"><span class="legend-dot urgent-red"></span> Prazo Crítico (01/10)</span>
+            <span class="cal-legend-item"><span class="legend-dot urgent-amber"></span> Piloto Técnico (02/10)</span>
+            <span class="cal-legend-item"><span class="legend-dot workshop-blue"></span> Oficina Presencial (06-08/10)</span>
+            <span class="cal-legend-item"><span class="legend-dot neutral-slate"></span> Marcos Institucionais</span>
+            <span class="cal-legend-item"><span class="legend-dot free-capacity"></span> Janela Livre / Capacidade</span>
+          </div>
+        </div>
+
+        <div class="cal-month-scroll-container">
+          <div class="cal-month-grid">
+            <!-- Cabeçalho dos 7 Dias da Semana (Segunda a Domingo) -->
+            <div class="cal-weekdays-row">
+              <div class="cal-weekday-header">Segunda</div>
+              <div class="cal-weekday-header">Terça</div>
+              <div class="cal-weekday-header">Quarta</div>
+              <div class="cal-weekday-header">Quinta</div>
+              <div class="cal-weekday-header">Sexta</div>
+              <div class="cal-weekday-header cal-header-weekend">Sábado</div>
+              <div class="cal-weekday-header cal-header-weekend">Domingo</div>
+            </div>
+
+            <!-- Grade Completa do Mês de Outubro de 2026 (5 Semanas · 35 Dias) -->
+            <div class="cal-days-grid">
+              
+              <!-- ===== SEMANA 1: 28/09 A 04/10 ===== -->
+              <!-- Seg 28/09 (Setembro) -->
+              <div class="cal-day-cell cal-day-prev-month">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">28</span>
+                  <span class="cal-month-label">Set</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-neutral-note">Semana Base</span>
+                </div>
+              </div>
+
+              <!-- Ter 29/09 (Setembro) -->
+              <div class="cal-day-cell cal-day-prev-month">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">29</span>
+                  <span class="cal-month-label">Set</span>
+                </div>
+                <div class="cal-day-content"></div>
+              </div>
+
+              <!-- Qua 30/09 (Setembro) -->
+              <div class="cal-day-cell cal-day-prev-month">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">30</span>
+                  <span class="cal-month-label">Set</span>
+                </div>
+                <div class="cal-day-content"></div>
+              </div>
+
+              <!-- Qui 01/10: [Meridian] Confirmação da Oficina -->
+              <div class="cal-day-cell cal-day-deadline-urgent">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">01</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                  <span class="cal-badge-pill pill-urgent-red">Amanhã</span>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-urgent-red" data-id="meridian" type="button" title="Clique para filtrar/localizar Meridian Estratégia">
+                    <span class="cal-event-tag-org">Meridian</span>
+                    <span class="cal-event-tag-desc">Confirmação da Oficina</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sex 02/10: [Senda] Alinhamento Piloto (Theo) -->
+              <div class="cal-day-cell cal-day-deadline-amber">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">02</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                  <span class="cal-badge-pill pill-urgent-amber">Prioritário</span>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-urgent-amber" data-id="senda" type="button" title="Clique para filtrar/localizar Senda Patrimonial">
+                    <span class="cal-event-tag-org">Senda</span>
+                    <span class="cal-event-tag-desc">Alinhamento Piloto (Theo)</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sáb 03/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">03</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- Dom 04/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">04</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- ===== SEMANA 2: 05/10 A 11/10 ===== -->
+              <!-- Seg 05/10: [Violeta] Janela de Call de UX -->
+              <div class="cal-day-cell">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">05</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-neutral" data-id="violeta" type="button" title="Clique para filtrar/localizar Violeta Financeira">
+                    <span class="cal-event-tag-org">Violeta</span>
+                    <span class="cal-event-tag-desc">Janela de Call de UX</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Ter 06/10: [Meridian] Execução da Oficina Presencial -->
+              <div class="cal-day-cell">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">06</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-workshop" data-id="meridian" type="button" title="Clique para filtrar/localizar Meridian Estratégia">
+                    <span class="cal-event-tag-org">Meridian</span>
+                    <span class="cal-event-tag-desc">Execução da Oficina Presencial</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Qua 07/10: [Brava] Confirmação da Turma (Helena) + [Meridian] Oficina Presencial (Dia 2) -->
+              <div class="cal-day-cell">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">07</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-neutral" data-id="brava" type="button" title="Clique para filtrar/localizar Brava Consultoria">
+                    <span class="cal-event-tag-org">Brava</span>
+                    <span class="cal-event-tag-desc">Confirmação da Turma (Helena)</span>
+                  </button>
+                  <button class="cal-event-tag tag-workshop" data-id="meridian" type="button" title="Clique para filtrar/localizar Meridian Estratégia">
+                    <span class="cal-event-tag-org">Meridian</span>
+                    <span class="cal-event-tag-desc">Oficina Presencial (Dia 2)</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Qui 08/10: [Meridian] Execução da Oficina Presencial -->
+              <div class="cal-day-cell">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">08</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-workshop" data-id="meridian" type="button" title="Clique para filtrar/localizar Meridian Estratégia">
+                    <span class="cal-event-tag-org">Meridian</span>
+                    <span class="cal-event-tag-desc">Execução da Oficina Presencial</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sex 09/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">09</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Sáb 10/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">10</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- Dom 11/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">11</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- ===== SEMANA 3: 12/10 A 18/10 ===== -->
+              <!-- Seg 12/10: Feriado Nacional (N. Sra. Aparecida) -->
+              <div class="cal-day-cell cal-day-holiday">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">12</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                  <span class="cal-badge-pill pill-holiday">Feriado</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-holiday-text">Recesso Nacional</span>
+                </div>
+              </div>
+
+              <!-- Ter 13/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">13</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Qua 14/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">14</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Qui 15/10: [Prisma] Envio do Deck Institucional -->
+              <div class="cal-day-cell">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">15</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-neutral" data-id="prisma" type="button" title="Clique para filtrar/localizar Prisma Estratégica">
+                    <span class="cal-event-tag-org">Prisma</span>
+                    <span class="cal-event-tag-desc">Envio do Deck Institucional</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sex 16/10: [Aerion] Envio do Checklist Técnico -->
+              <div class="cal-day-cell">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">16</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <button class="cal-event-tag tag-neutral" data-id="aerion" type="button" title="Clique para filtrar/localizar Aerion Aeroespacial">
+                    <span class="cal-event-tag-org">Aerion</span>
+                    <span class="cal-event-tag-desc">Envio do Checklist Técnico</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Sáb 17/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">17</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- Dom 18/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">18</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- ===== SEMANA 4: 19/10 A 25/10 ===== -->
+              <!-- Seg 19/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">19</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Ter 20/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">20</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Qua 21/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">21</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Qui 22/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">22</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Sex 23/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">23</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Sáb 24/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">24</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- Dom 25/10 (Fim de Semana) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">25</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- ===== SEMANA 5: 26/10 A 01/11 ===== -->
+              <!-- Seg 26/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">26</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Ter 27/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">27</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Qua 28/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">28</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Qui 29/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">29</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Sex 30/10 (Dia Útil Livre) -->
+              <div class="cal-day-cell cal-day-free">
+                <div class="cal-day-head">
+                  <div class="cal-day-number-group">
+                    <span class="cal-day-number">30</span>
+                    <span class="cal-month-label">Out</span>
+                  </div>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-free-indicator">Janela Livre</span>
+                </div>
+              </div>
+
+              <!-- Sáb 31/10 (Fim de Semana / Fechamento Outubro) -->
+              <div class="cal-day-cell cal-day-weekend">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">31</span>
+                  <span class="cal-month-label">Out</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-weekend-indicator">Fim de Semana</span>
+                </div>
+              </div>
+
+              <!-- Dom 01/11 (Novembro / Próximo Ciclo) -->
+              <div class="cal-day-cell cal-day-next-month">
+                <div class="cal-day-head">
+                  <span class="cal-day-number">01</span>
+                  <span class="cal-month-label">Nov</span>
+                </div>
+                <div class="cal-day-content">
+                  <span class="cal-neutral-note">Próximo Ciclo</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. NAVEGAÇÃO DE ABAS SÓBRIA (3 SEÇÕES)
+         ==================================================================== -->
+    <nav class="nav-tabs-dark" aria-label="Navegação Principal">
+      <button class="nav-tab-dark-btn active" id="tabPainel">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+        Painel de Oportunidades
+      </button>
+      <button class="nav-tab-dark-btn" id="tabEquipe">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        Plano de Equipe &amp; Governança
+      </button>
+      <button class="nav-tab-dark-btn" id="tabLetters">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        Central de Cartas Institucionais
+      </button>
+    </nav>
+
+    <!-- ====================================================================
+         5. VISÃO 1: PAINEL DE OPORTUNIDADES (MODO CARDS & MODO TABELA)
+         ==================================================================== -->
+    <main id="painelView">
+      <!-- Toolbar de Filtros, Busca e Alternância de Visualização -->
+      <div class="controls-toolbar-dark">
+        <div class="filter-pills-row">
+          <button class="filter-pill-dark active" data-filter="todas">
+            Todas <span class="pill-count">6</span>
+          </button>
+          <button class="filter-pill-dark" data-filter="alta">
+            Assumir Agora <span class="pill-count">2</span>
+          </button>
+          <button class="filter-pill-dark" data-filter="media">
+            Formação / Rigor <span class="pill-count">1</span>
+          </button>
+          <button class="filter-pill-dark" data-filter="baixa">
+            Pipeline 2027 / Em Espera <span class="pill-count">3</span>
+          </button>
+        </div>
+
+        <div class="toolbar-right-actions">
+          <div class="search-field-wrap-dark">
+            <svg class="search-field-icon-dark" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" class="search-field-input-dark" id="searchInput" placeholder="Filtrar organização, setor, tecnologia..." autocomplete="off">
+          </div>
+
+          <!-- Seletor de Modo de Visualização (Cards vs Tabela) -->
+          <div class="view-mode-toggle" role="group" aria-label="Modo de visualização das organizações">
+            <button class="view-toggle-btn active" id="btnViewCards" title="Visualização em Cartões Executivos">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+              Cards
+            </button>
+            <button class="view-toggle-btn" id="btnViewTable" title="Visualização em Tabela Consolidada">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+              Tabela
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modo Cards: Grade dos 6 Cards Ordenados por Vencimento -->
+      <div class="opportunities-grid" id="opportunitiesGrid">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+
+      <!-- Modo Tabela: Tabela Executiva Consolidada das 6 Organizações -->
+      <div class="opportunities-table-wrap" id="opportunitiesTableContainer" style="display: none;">
+        <!-- Renderizado dinamicamente via app.js -->
+      </div>
+    </main>
+
+    <!-- ====================================================================
+         6. VISÃO 2: PLANO DE EQUIPE & MATRIZ DE GOVERNANÇA (NOVA SEÇÃO)
+         ==================================================================== -->
+    <section class="team-governance-section" id="equipeView" style="display: none;">
+      
+      <!-- Cabeçalho da Seção de Equipe com Diretrizes Concisa e Elegante -->
+      <div class="section-intro-header">
+        <div>
+          <h2 class="section-intro-title">Matriz de Capacidade da Equipe &amp; Governança (6 Integrantes)</h2>
+          <p class="section-intro-guidelines">Diretrizes: Teto de 2 frentes por integrante · Máximo de 2 membros por reunião externa · 1 único projeto técnico no ciclo (Senda).</p>
+        </div>
+        <span class="gov-summary-pill">Capacidade Efetiva: 100% Alocada (0 Conflitos)</span>
+      </div>
+
+      <!-- Tabela 1: Alocação Individual dos 6 Membros -->
+      <div class="team-table-box">
+        <div class="table-box-header">
+          <h3 class="table-box-title">Tabela 1 · Alocação Individual dos 6 Membros da Equipe</h3>
+          <span class="table-box-hint">Comprovação de entregas ativas e equilíbrio de carga horária semanal</span>
+        </div>
+        <div class="table-responsive-wrap">
+          <table class="executive-table">
+            <thead>
+              <tr>
+                <th style="width: 17%;">Membro &amp; Papel</th>
+                <th style="width: 25%;">Frentes Ativas (Outubro 2026)</th>
+                <th style="width: 13%;">Carga Estimada</th>
+                <th style="width: 32%;">Entregas Principais / Foco de Atuação</th>
+                <th style="width: 13%;">Status de Carga</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Membro 1</strong>
+                  <div class="cell-sub">Operações</div>
+                </td>
+                <td>
+                  <div>Suporte Operacional Piloto Senda</div>
+                  <div class="cell-sub">Logística &amp; Lista Oficina Meridian</div>
+                </td>
+                <td>10h – 12h/sem</td>
+                <td>Acompanhamento das reuniões de alinhamento com assessores da Senda e suporte ao deslocamento presencial para a Meridian.</td>
+                <td><span class="badge-status-table ok">100% Balanceada</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Membro 2</strong>
+                  <div class="cell-sub">Técnico / IA</div>
+                </td>
+                <td>
+                  <div>Célula Técnica Senda (NLP / Busca)</div>
+                  <div class="cell-sub">Avaliação Técnica de Dados Violeta</div>
+                </td>
+                <td>12h – 14h/sem</td>
+                <td>Desenvolvimento do protótipo de 4 semanas com dados sintéticos/higienizados e acompanhamento semanal com tutor da Senda.</td>
+                <td><span class="badge-status-table ok">Foco Técnico Único</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Membro 3</strong>
+                  <div class="cell-sub">Técnico / Formação</div>
+                </td>
+                <td>
+                  <div>Mentoria Analítica Brava (Titular Técnico)</div>
+                  <div class="cell-sub">Checklist Técnico Manuais Aerion</div>
+                </td>
+                <td>10h – 12h/sem</td>
+                <td>Participação nas sessões semanais da Brava, codificação dos frameworks analíticos e elaboração de dúvidas técnicas para a Aerion.</td>
+                <td><span class="badge-status-table ok">100% Balanceada</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Membro 4</strong>
+                  <div class="cell-sub">Operações / Multiplicador</div>
+                </td>
+                <td>
+                  <div>Mentoria Analítica Brava (Titular Negócios)</div>
+                  <div class="cell-sub">Coordenação de Workshops Internos</div>
+                </td>
+                <td>10h – 12h/sem</td>
+                <td>Participação nas sessões da Brava e condução das dinâmicas quinzenais de multiplicação do conteúdo com os outros 4 membros.</td>
+                <td><span class="badge-status-table ok">Multiplicador Ativo</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Membro 5</strong>
+                  <div class="cell-sub">Relações Institucionais (Marcos Wolfgang)</div>
+                </td>
+                <td>
+                  <div>Liderança Executiva &amp; RI das 6 Frentes</div>
+                  <div class="cell-sub">Governança, Contratos &amp; Gestão do Case</div>
+                </td>
+                <td>12h – 14h/sem</td>
+                <td>Redação e despacho das 6 cartas formais, condução das calls institucionais, proteção da Regra de Ouro e relacionamento executivo.</td>
+                <td><span class="badge-status-table ok">Liderança Ativa</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Membro 6</strong>
+                  <div class="cell-sub">Growth &amp; Novos Negócios</div>
+                </td>
+                <td>
+                  <div>Deck Institucional Prisma (até 15/10)</div>
+                  <div class="cell-sub">Interface da Palestra Senda &amp; Aula UX Violeta</div>
+                </td>
+                <td>10h – 12h/sem</td>
+                <td>Estruturação do material institucional da Liga para a Prisma e organização dos canais de transmissão para a palestra e aula de UX.</td>
+                <td><span class="badge-status-table ok">100% Balanceada</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Tabela 2: Presença em Reuniões e Eventos -->
+      <div class="team-table-box">
+        <div class="table-box-header">
+          <h3 class="table-box-title">Tabela 2 · Matriz de Presença em Reuniões e Eventos</h3>
+          <span class="table-box-hint">Aplicação prática do protocolo de no máximo 2 membros em reuniões institucionais</span>
+        </div>
+        <div class="table-responsive-wrap">
+          <table class="executive-table">
+            <thead>
+              <tr>
+                <th style="width: 18%;">Organização</th>
+                <th style="width: 25%;">Formato do Encontro &amp; Calendário</th>
+                <th style="width: 25%;">Membros Escalados</th>
+                <th style="width: 32%;">Justificativa de Blindagem Institucional</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Senda Patrimonial</strong></td>
+                <td>Call de Alinhamento (20 min) + Reunião de Pontapé Técnico</td>
+                <td><strong>Membro 5 (RI) + Membro 1 (Operações)</strong></td>
+                <td>Alinha diretrizes de dados sintéticos e cronograma antes da viagem do Theo sem interromper o tempo de código do desenvolvedor.</td>
+              </tr>
+              <tr>
+                <td><strong>Meridian Estratégia</strong></td>
+                <td>Oficina Presencial de Diagnóstico (1 manhã entre 06 e 08/10)</td>
+                <td><strong>4 membros na oficina presencial (Organização: Membros 1 e 3)</strong></td>
+                <td>Evento concentrado em uma única manhã com delegação de 4 membros, mantendo os outros 2 dedicados às entregas de desenvolvimento na universidade.</td>
+              </tr>
+              <tr>
+                <td><strong>Brava Consultoria</strong></td>
+                <td>Mentoria de 6 semanas (sessões semanais com equipe de suporte)</td>
+                <td><strong>2 membros na mentoria de 6 semanas (Membros 3 e 4 atuam como multiplicadores)</strong></td>
+                <td>Dupla focal atua como multiplicadora interna em reuniões quinzenais, blindando os outros 4 membros de sobrecarga nas disciplinas.</td>
+              </tr>
+              <tr>
+                <td><strong>Violeta Financeira</strong></td>
+                <td>Call Exploratória (30 min) + Aula Remota de UX (Outubro)</td>
+                <td><strong>1 membro institucional (Membro 5 conduz a call de 30 min com apoio do Membro 2)</strong></td>
+                <td>RI lidera a aproximação e o desenvolvedor assiste a aula de UX e avalia a viabilidade futura das bases para o ciclo de 2027.</td>
+              </tr>
+              <tr>
+                <td><strong>Prisma Estratégica</strong></td>
+                <td>Call Institucional (20 min) + Envio de Deck até 15/10</td>
+                <td><strong>1 membro institucional (Membro 5 conduz call de 20 min; Membro 6 elabora deck até 15/10)</strong></td>
+                <td>Foco total em posicionamento acadêmico e institucional, mantendo o time de desenvolvimento isolado da competição de novembro.</td>
+              </tr>
+              <tr>
+                <td><strong>Aerion Sistemas</strong></td>
+                <td>Visita Técnica de Campo à Fábrica (Novembro/2026)</td>
+                <td><strong>1 membro de growth (Membro 6 consolida checklist de dúvidas até 16/10)</strong></td>
+                <td>RI assegura credenciamento corporativo e Growth consolida checklist de chão de fábrica para futuro projeto em 2027.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ====================================================================
+         7. VISÃO 3: CENTRAL DE CARTAS INSTITUCIONAIS
+         ==================================================================== -->
+    <section class="letters-section-wrap" id="lettersView" style="display: none;">
+      <div class="letters-inner-grid-dark">
+        <nav class="letters-menu-nav-dark" id="lettersMenu">
+          <!-- Populado via app.js -->
+        </nav>
+
+        <div class="letter-view-pane">
+          <div class="letter-pane-header">
+            <div>
+              <h2 class="letter-pane-title" id="letterViewerOrg">Meridian Estratégia</h2>
+              <div class="letter-pane-subject" id="letterViewerSubject">Assunto da mensagem...</div>
+            </div>
+            <button class="btn-copy-action-primary" id="btnCopyActiveLetter">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              Copiar Mensagem Completa
+            </button>
+          </div>
+          <div class="letter-text-box-dark" id="letterViewerContent">
+            Carregando conteúdo da carta...
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ====================================================================
+       MODAL DE E-MAIL INSTITUCIONAL CORPORATIVO
+       ==================================================================== -->
+  <div class="modal-overlay" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="modalLetterTitle">
+    <div class="modal-box-window-dark">
+      <div class="modal-header-bar-dark">
+        <h3 class="modal-header-title" id="modalLetterTitle">Carta Institucional</h3>
+        <button class="modal-close-x" aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-scroll-body-dark">
+        <div class="email-meta-strip-dark">
+          <div><strong>De:</strong> Marcos Wolfgang (Liderança RI &amp; Growth — LIA UFSCar)</div>
+          <div id="modalEmailDest"><strong>Para:</strong> Contato da Organização</div>
+          <div id="modalLetterSubject"><strong>Assunto:</strong> Assunto da mensagem</div>
+          <div><strong>Data:</strong> Outubro de 2026</div>
+        </div>
+        <div class="modal-email-body-text-dark" id="modalLetterText">
+          Texto da carta...
+        </div>
+      </div>
+      <div class="modal-footer-bar-dark">
+        <button class="btn-secondary-ghost-dark modal-close-x">Fechar</button>
+        <button class="btn-copy-action-primary" id="btnModalCopy">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+          Copiar Mensagem
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       MODAL DE DIRETRIZES DE GOVERNANÇA
+       ==================================================================== -->
+  <div class="modal-overlay" id="govInfoModal" role="dialog" aria-modal="true" aria-labelledby="govModalTitle">
+    <div class="modal-box-window-dark">
+      <div class="modal-header-bar-dark">
+        <h3 class="modal-header-title" id="govModalTitle">Diretrizes de Governança — LIA UFSCar</h3>
+        <button class="modal-close-x" aria-label="Fechar modal">&times;</button>
+      </div>
+      <div class="modal-scroll-body-dark">
+        <div style="display: flex; flex-direction: column; gap: 12px; font-size: 13px; color: #cbd5e1;">
+          <div style="background: #0f172a; padding: 14px; border-radius: 8px; border: 1px solid #334155; border-left: 3px solid #ef4444;">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">A Regra de Ouro (Teto de 1 Projeto Técnico Ativo)</strong>
+            Para preservar a credibilidade institucional da Liga e evitar sobrecarga acadêmica, a LIA UFSCar assume estritamente 1 projeto simultâneo. No ciclo de Outubro/2026, esse compromisso é assumido exclusivamente com a <strong>Senda Patrimonial</strong>.
+          </div>
+          <div style="background: #0f172a; padding: 14px; border-radius: 8px; border: 1px solid #334155; border-left: 3px solid #38bdf8;">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">Multiplicadores Internos (Brava Consultoria)</strong>
+            Alocação de 2 membros focais na mentoria de 6 semanas, que compartilham os aprendizados com o restante da equipe, evitando dispersão das aulas na graduação.
+          </div>
+          <div style="background: #0f172a; padding: 14px; border-radius: 8px; border: 1px solid #334155; border-left: 3px solid #64748b;">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">Compromisso Exploratório vs. Desenvolvimento (Violeta &amp; Aerion)</strong>
+            A Liga mantém o relacionamento através de bate-papo, aula de UX e visita técnica, resguardando projetos de desenvolvimento longo para o 1º semestre de 2027.
+          </div>
+          <div style="background: #0f172a; padding: 14px; border-radius: 8px; border: 1px solid #334155; border-left: 3px solid #64748b;">
+            <strong style="color: #ffffff; display: block; margin-bottom: 3px;">Proteção de Foco (Prisma Estratégica)</strong>
+            Declinado o desafio de novembro para não dispersar o time da entrega técnica contratada com o mercado financeiro.
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer-bar-dark">
+        <button class="btn-secondary-ghost-dark modal-close-x">Entendido</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast de Notificação Flutuante Sóbrio -->
+  <div class="toast-notice-dark" id="toastBox" role="status" aria-live="polite">
+    Mensagem copiada com sucesso!
+  </div>
+
+  <!-- Script Principal Vanilla JS -->
+  <script src="app.js"></script>
+</body>
+</html>

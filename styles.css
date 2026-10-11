@@ -1,0 +1,1779 @@
+/* ==========================================================================
+   LIA UFSCar · Painel Estratégico de Oportunidades
+   Processo Seletivo Novos Founders · Marcos Wolfgang
+   PALETA CORPORATIVA SÓBRIA & CONTENÇÃO DE LAYOUT
+   100% Offline / Zero Dependências Externas / Suporte file:/// Nativo
+   ========================================================================== */
+
+:root {
+  /* Fundo Grafite Corporativo */
+  --bg-page: #0f172a;
+
+  /* Superfícies Sólidas em Ardósia Escuro */
+  --bg-card: #1e293b;
+  --bg-card-hover: #24344d;
+  --bg-inner: #0f172a;
+
+  /* Bordas Neutras Discretas em Cinza Neutro */
+  --border-color: #334155;
+  --border-hover: #475569;
+
+  /* Tipografia Corporativa de Alto Contraste */
+  --text-white: #f8fafc;
+  --text-light: #e2e8f0;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Ação Primária Executiva Discreta */
+  --primary-blue: #0284c7;
+  --primary-blue-hover: #0369a1;
+
+  /* Destaque Exclusivo de Urgência (Apenas Semana 1) */
+  --urgent-red: #f87171;
+  --urgent-red-bg: rgba(239, 68, 68, 0.14);
+  --urgent-red-border: rgba(239, 68, 68, 0.35);
+
+  --urgent-amber: #fbbf24;
+  --urgent-amber-bg: rgba(245, 158, 11, 0.14);
+  --urgent-amber-border: rgba(245, 158, 11, 0.35);
+
+  /* Elementos Neutros */
+  --neutral-badge-bg: #334155;
+  --neutral-badge-border: #475569;
+  --neutral-badge-text: #cbd5e1;
+
+  /* Formas & Transições */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-full: 9999px;
+
+  --transition: all 0.15s ease;
+}
+
+/* Reset Universal & Prevenção de Transbordamento */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-light);
+  line-height: 1.5;
+  font-size: 13.5px;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   1. CABEÇALHO EXECUTIVO SÓBRIO
+   ========================================================================== */
+.executive-header-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.header-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.brand-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-badge {
+  background: #0284c7;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 12.5px;
+  letter-spacing: 0.8px;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-text-group h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-white);
+  letter-spacing: -0.01em;
+}
+
+.header-subtitle {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.header-subtitle .highlight {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.header-subtitle strong {
+  color: var(--text-white);
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-header-dark {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.btn-header-dark:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-hover);
+  color: var(--text-white);
+}
+
+/* Barra de Contexto Superior Sóbria */
+.context-bar-dark {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  box-sizing: border-box;
+}
+
+.context-bar-text {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+/* ==========================================================================
+   2. CARTÕES DE KPIS EXECUTIVOS SÓBRIOS (SEM BORDAS NEON)
+   ========================================================================== */
+.kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 860px) {
+  .kpi-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kpi-card-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+.kpi-card-dark:hover {
+  border-color: var(--border-hover);
+}
+
+.kpi-content-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.kpi-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.kpi-number-group {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin: 2px 0;
+}
+
+.kpi-number {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--text-white);
+  line-height: 1;
+}
+
+.kpi-badge-dark.neutral {
+  font-size: 10.5px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.kpi-desc {
+  font-size: 11.5px;
+  color: var(--text-dim);
+}
+
+/* ==========================================================================
+   3. AGENDA DE PRAZOS — OUTUBRO 2026 (SEM VAZAR / 100% CONTIDA)
+   ========================================================================== */
+.agenda-roadmap-section {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+
+.agenda-roadmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.agenda-header-title-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.agenda-heading-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.agenda-subheading-text {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.agenda-legend-hint {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.agenda-header-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Alternador Compacto de Modos da Agenda */
+.agenda-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.agenda-toggle-btn {
+  background: transparent;
+  border: none;
+  border-radius: 3px;
+  color: var(--text-muted);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 4px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.agenda-toggle-btn:hover {
+  color: var(--text-white);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.agenda-toggle-btn.active {
+  background: var(--border-color);
+  color: var(--text-white);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+/* Grade Estrita de 3 Colunas: Sem vazamentos com minmax(0, 1fr) */
+.agenda-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .agenda-columns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.agenda-week-column {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Destaque Exclusivo de Urgência: Semana 1 com alerta suave */
+.agenda-week-column.week-urgent {
+  border-color: rgba(239, 68, 68, 0.45);
+}
+
+.week-column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.week-column-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.week-column-tag {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.week-column-tag.tag-urgent {
+  background: var(--urgent-red-bg);
+  color: var(--urgent-red);
+  border: 1px solid var(--urgent-red-border);
+}
+
+.week-column-tag.tag-neutral {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+/* Pilha de Eventos Simples (Sem Caixas Redundantes) */
+.agenda-events-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+
+.agenda-event-row {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.agenda-event-row:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+}
+
+/* Crachás de Data Destacados */
+.cal-badge-urgent {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.cal-badge-urgent.red {
+  background: var(--urgent-red-bg);
+  color: var(--urgent-red);
+  border: 1px solid var(--urgent-red-border);
+}
+
+.cal-badge-urgent.amber {
+  background: var(--urgent-amber-bg);
+  color: var(--urgent-amber);
+  border: 1px solid var(--urgent-amber-border);
+}
+
+.cal-badge-neutral {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 11.5px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  background: var(--neutral-badge-bg);
+  color: var(--neutral-badge-text);
+  border: 1px solid var(--neutral-badge-border);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.cal-event-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+  overflow: hidden;
+  flex: 1;
+}
+
+.cal-event-org {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cal-event-action {
+  font-size: 11.5px;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ==========================================================================
+   MODO CALENDÁRIO MENSAL (OUTUBRO 2026 - 3 SEMANAS EXECUTIVAS)
+   ========================================================================== */
+.agenda-calendar-month-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeInCal 0.18s ease-in-out;
+}
+
+@keyframes fadeInCal {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cal-month-scroll-container {
+  width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+/* Barra de Legenda Executiva & Capacidade Livre */
+.cal-month-legend-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 8px 14px;
+  margin-bottom: 10px;
+}
+
+.cal-month-legend-title {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cal-month-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cal-month-subtext {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.cal-legend-pills {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cal-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10.5px;
+  color: var(--text-secondary);
+}
+
+.legend-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-dot.urgent-red {
+  background: var(--urgent-red);
+}
+
+.legend-dot.urgent-amber {
+  background: var(--urgent-amber);
+}
+
+.legend-dot.workshop-blue {
+  background: #38bdf8;
+}
+
+.legend-dot.neutral-slate {
+  background: #94a3b8;
+}
+
+.legend-dot.free-capacity {
+  border: 1px dashed #64748b;
+  background: transparent;
+}
+
+.cal-month-grid {
+  min-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho dos 7 Dias da Semana (Segunda a Domingo) */
+.cal-weekdays-row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cal-weekday-header {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 5px 6px;
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+.cal-weekday-header.cal-header-weekend {
+  color: var(--text-dim);
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* Grade Completa de 7 Colunas e 5 Semanas */
+.cal-days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cal-day-cell {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 7px 8px;
+  min-height: 86px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+.cal-day-cell:hover {
+  border-color: var(--border-hover);
+}
+
+/* Dias fora de Outubro (Setembro / Novembro) */
+.cal-day-cell.cal-day-prev-month,
+.cal-day-cell.cal-day-next-month {
+  opacity: 0.4;
+  background: rgba(15, 23, 42, 0.4);
+}
+
+/* Fins de Semana (Sábado e Domingo) */
+.cal-day-cell.cal-day-weekend {
+  background: rgba(15, 23, 42, 0.45);
+  border-color: rgba(51, 65, 85, 0.65);
+}
+
+.cal-day-cell.cal-day-weekend .cal-day-number {
+  color: var(--text-dim);
+}
+
+/* Dias Úteis Livres (Janela de Capacidade Aberta) */
+.cal-day-cell.cal-day-free {
+  background: var(--bg-inner);
+}
+
+.cal-day-cell.cal-day-free:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: var(--border-hover);
+}
+
+/* Destaque Urgente (01/10 Meridian) */
+.cal-day-cell.cal-day-deadline-urgent {
+  border-color: rgba(239, 68, 68, 0.45);
+  background: rgba(239, 68, 68, 0.03);
+}
+
+/* Destaque Prioritário (02/10 Senda) */
+.cal-day-cell.cal-day-deadline-amber {
+  border-color: rgba(245, 158, 11, 0.45);
+  background: rgba(245, 158, 11, 0.03);
+}
+
+/* Feriado Nacional */
+.cal-day-cell.cal-day-holiday {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Cabeçalho do Card de Cada Dia */
+.cal-day-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cal-day-number-group {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.cal-day-number {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.cal-month-label {
+  font-size: 9.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+
+/* Pílulas de Status no Cabeçalho do Dia */
+.cal-badge-pill {
+  font-size: 9px;
+  font-weight: 700;
+  padding: 1px 4px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.cal-badge-pill.pill-urgent-red {
+  background: var(--urgent-red-bg);
+  color: var(--urgent-red);
+  border: 1px solid var(--urgent-red-border);
+}
+
+.cal-badge-pill.pill-urgent-amber {
+  background: var(--urgent-amber-bg);
+  color: var(--urgent-amber);
+  border: 1px solid var(--urgent-amber-border);
+}
+
+.cal-badge-pill.pill-holiday {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+/* Corpo do Dia e Indicadores */
+.cal-day-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.cal-free-indicator {
+  font-size: 9.5px;
+  color: #64748b;
+  font-style: italic;
+  padding-top: 2px;
+}
+
+.cal-weekend-indicator {
+  font-size: 9.5px;
+  color: #475569;
+  font-style: italic;
+  padding-top: 2px;
+}
+
+.cal-neutral-note {
+  font-size: 9.5px;
+  color: var(--text-dim);
+  font-style: italic;
+  padding-top: 2px;
+}
+
+.cal-holiday-text {
+  font-size: 10px;
+  color: var(--text-muted);
+  font-style: italic;
+  padding-top: 2px;
+}
+
+/* Tags Interativas de Compromisso e Entrega */
+.cal-event-tag {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 4px 6px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cal-event-tag:hover {
+  transform: translateY(-1px);
+  border-color: var(--border-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cal-event-tag-org {
+  font-size: 10.5px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cal-event-tag-desc {
+  font-size: 9.5px;
+  color: var(--text-muted);
+  line-height: 1.2;
+}
+
+/* Variações de Estilo das Tags */
+.cal-event-tag.tag-urgent-red {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: var(--urgent-red-border);
+}
+.cal-event-tag.tag-urgent-red .cal-event-tag-org {
+  color: var(--urgent-red);
+}
+.cal-event-tag.tag-urgent-red:hover {
+  background: rgba(239, 68, 68, 0.18);
+  border-color: var(--urgent-red);
+}
+
+.cal-event-tag.tag-urgent-amber {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: var(--urgent-amber-border);
+}
+.cal-event-tag.tag-urgent-amber .cal-event-tag-org {
+  color: var(--urgent-amber);
+}
+.cal-event-tag.tag-urgent-amber:hover {
+  background: rgba(245, 158, 11, 0.18);
+  border-color: var(--urgent-amber);
+}
+
+.cal-event-tag.tag-workshop {
+  background: rgba(2, 132, 199, 0.1);
+  border-color: rgba(2, 132, 199, 0.35);
+}
+.cal-event-tag.tag-workshop .cal-event-tag-org {
+  color: #38bdf8;
+}
+.cal-event-tag.tag-workshop:hover {
+  background: rgba(2, 132, 199, 0.18);
+  border-color: #38bdf8;
+}
+
+.cal-event-tag.tag-neutral {
+  background: var(--bg-card);
+  border-color: var(--border-color);
+}
+.cal-event-tag.tag-neutral .cal-event-tag-org {
+  color: var(--text-light);
+}
+.cal-event-tag.tag-neutral:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+}
+
+/* ==========================================================================
+   4. NAVEGAÇÃO, FILTROS E PESQUISA SÓBRIA
+   ========================================================================== */
+.nav-tabs-dark {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 18px;
+}
+
+.nav-tab-dark-btn {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 9px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  margin-bottom: -1px;
+}
+
+.nav-tab-dark-btn:hover {
+  color: var(--text-white);
+}
+
+.nav-tab-dark-btn.active {
+  color: #38bdf8;
+  border-bottom-color: #38bdf8;
+}
+
+.controls-toolbar-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.filter-pills-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.filter-pill-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-pill-dark:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-white);
+  border-color: var(--border-hover);
+}
+
+.filter-pill-dark.active {
+  background: var(--primary-blue);
+  color: #ffffff;
+  border-color: var(--primary-blue);
+}
+
+.pill-count {
+  font-size: 10px;
+  padding: 1px 5px;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.filter-pill-dark.active .pill-count {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.search-field-wrap-dark {
+  position: relative;
+  min-width: 250px;
+}
+
+.search-field-input-dark {
+  width: 100%;
+  padding: 7px 12px 7px 32px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  background: var(--bg-card);
+  color: var(--text-white);
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-field-input-dark:focus {
+  border-color: #38bdf8;
+}
+
+.search-field-icon-dark {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-dim);
+  pointer-events: none;
+}
+
+.toolbar-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.view-mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  gap: 2px;
+}
+
+.view-toggle-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+}
+
+.view-toggle-btn:hover {
+  color: var(--text-white);
+  background: var(--bg-card-hover);
+}
+
+.view-toggle-btn.active {
+  background: var(--primary-blue);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   5. CARDS DAS ORGANIZAÇÕES (4 TÓPICOS DIRETOS + BOTÃO FIXO)
+   ========================================================================== */
+.opportunities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 900px) {
+  .opportunities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.opportunity-card-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  box-sizing: border-box;
+  transition: var(--transition);
+}
+
+.opportunity-card-dark:hover {
+  border-color: var(--border-hover);
+}
+
+/* Realce Suave ao Clicar na Agenda */
+.card-highlight-glow {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.25) !important;
+}
+
+/* Topo do Card */
+.card-head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.card-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.card-rank-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-org-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.25;
+}
+
+.card-sector-sub {
+  font-size: 12px;
+  color: var(--text-dim);
+}
+
+/* Badges de Prazo no Topo do Card */
+.card-deadline-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.card-deadline-badge.urgent-red {
+  background: var(--urgent-red-bg);
+  color: var(--urgent-red);
+  border: 1px solid var(--urgent-red-border);
+}
+
+.card-deadline-badge.urgent-amber {
+  background: var(--urgent-amber-bg);
+  color: var(--urgent-amber);
+  border: 1px solid var(--urgent-amber-border);
+}
+
+.card-deadline-badge.neutral {
+  background: var(--bg-inner);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+/* Exatamente os 4 Tópicos Diretos e Espaçados */
+.card-topics-group {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin: 4px 0 6px;
+}
+
+.topic-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.topic-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+}
+
+.topic-text {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+.topic-text strong {
+  color: var(--text-white);
+  font-weight: 700;
+}
+
+.topic-text.topic-condition {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  padding: 7px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  color: #f1f5f9;
+}
+
+/* Rodapé Fixo com Botão */
+.card-footer-action {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border-color);
+}
+
+.btn-open-letter-primary {
+  width: 100%;
+  background: var(--primary-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 9px 14px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+
+.btn-open-letter-primary:hover {
+  background: var(--primary-blue-hover);
+}
+
+/* ==========================================================================
+   5.1 TABELA EXECUTIVA CONSOLIDADA (MODO TABELA)
+   ========================================================================== */
+.opportunities-table-wrap {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.executive-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  color: var(--text-light);
+  text-align: left;
+  min-width: 960px;
+}
+
+.executive-table thead th {
+  background: #152033;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.executive-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border-color);
+  vertical-align: top;
+  line-height: 1.45;
+  transition: var(--transition);
+}
+
+.executive-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.executive-table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.025);
+}
+
+tr.card-highlight-glow td {
+  background-color: rgba(56, 189, 248, 0.15) !important;
+}
+
+.cell-sub {
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-top: 3px;
+}
+
+.badge-status-table {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-status-table.ok {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-status-table.urgent-red {
+  background: var(--urgent-red-bg);
+  color: var(--urgent-red);
+  border: 1px solid var(--urgent-red-border);
+}
+
+.badge-status-table.urgent-amber {
+  background: var(--urgent-amber-bg);
+  color: var(--urgent-amber);
+  border: 1px solid var(--urgent-amber-border);
+}
+
+.badge-status-table.neutral {
+  background: var(--bg-inner);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+}
+
+.badge-priority {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-priority.high {
+  background: rgba(239, 68, 68, 0.14);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+}
+
+.badge-priority.medium {
+  background: rgba(245, 158, 11, 0.14);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.badge-priority.low {
+  background: rgba(100, 116, 139, 0.18);
+  color: #94a3b8;
+  border: 1px solid #475569;
+}
+
+.btn-table-action {
+  background: transparent;
+  border: 1px solid #38bdf8;
+  color: #38bdf8;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  transition: var(--transition);
+}
+
+.btn-table-action:hover {
+  background: #0284c7;
+  color: #ffffff;
+  border-color: #0284c7;
+}
+
+/* ==========================================================================
+   5.2 PLANO DE EQUIPE & MATRIZ DE GOVERNANÇA (SEÇÃO DEDICADA)
+   ========================================================================== */
+.team-governance-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-intro-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-bottom: 4px;
+}
+
+.section-intro-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.3;
+}
+
+.section-intro-guidelines {
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.gov-summary-pill {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 11.5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.team-table-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-sizing: border-box;
+}
+
+.table-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.table-box-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.table-box-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.table-responsive-wrap {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: var(--bg-inner);
+}
+
+/* ==========================================================================
+   6. CENTRAL DE CARTAS INSTITUCIONAIS
+   ========================================================================== */
+.letters-section-wrap {
+  display: none;
+}
+
+.letters-section-wrap.active {
+  display: block;
+}
+
+.letters-inner-grid-dark {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 18px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  min-height: 520px;
+}
+
+@media (max-width: 860px) {
+  .letters-inner-grid-dark {
+    grid-template-columns: 1fr;
+  }
+}
+
+.letters-menu-nav-dark {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-right: 1px solid var(--border-color);
+  padding-right: 14px;
+}
+
+@media (max-width: 860px) {
+  .letters-menu-nav-dark {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 0;
+    padding-bottom: 14px;
+  }
+}
+
+.letter-menu-btn-dark {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  transition: var(--transition);
+}
+
+.letter-menu-btn-dark:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-hover);
+}
+
+.letter-menu-btn-dark.active {
+  background: var(--primary-blue);
+  border-color: var(--primary-blue);
+}
+
+.menu-btn-org {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.menu-btn-sub {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.letter-menu-btn-dark.active .menu-btn-sub {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.letter-view-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.letter-pane-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.letter-pane-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.letter-pane-subject {
+  font-size: 12.5px;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.btn-copy-action-primary {
+  background: #0284c7;
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.btn-copy-action-primary:hover {
+  background: #0369a1;
+}
+
+.letter-text-box-dark {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-light);
+  white-space: pre-wrap;
+  font-family: inherit;
+  flex: 1;
+}
+
+/* ==========================================================================
+   7. MODAIS
+   ========================================================================== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.modal-box-window-dark {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 680px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header-bar-dark {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.modal-header-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.modal-close-x {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.modal-close-x:hover {
+  color: var(--text-white);
+}
+
+.modal-scroll-body-dark {
+  padding: 18px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-meta-strip-dark {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--text-muted);
+}
+
+.email-meta-strip-dark strong {
+  color: var(--text-light);
+}
+
+.modal-email-body-text-dark {
+  background: var(--bg-inner);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--text-light);
+  white-space: pre-wrap;
+}
+
+.modal-footer-bar-dark {
+  padding: 12px 18px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn-secondary-ghost-dark {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 7px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary-ghost-dark:hover {
+  color: var(--text-white);
+  border-color: var(--border-hover);
+}
+
+/* Toast de Notificação Flutuante */
+.toast-notice-dark {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #1e293b;
+  border: 1px solid #0284c7;
+  color: #f8fafc;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 12.5px;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.toast-notice-dark.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Impressão / PDF */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .app-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+  .btn-header-dark, .btn-open-letter-primary, .controls-toolbar-dark, .nav-tabs-dark, .btn-table-action, .view-mode-toggle {
+    display: none !important;
+  }
+  .executive-header-dark, .agenda-roadmap-section, .kpi-card-dark, .opportunity-card-dark, .team-table-box, .opportunities-table-wrap {
+    background: #ffffff !important;
+    border: 1px solid #cccccc !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+  .card-org-title, .kpi-number, .topic-text strong, .cal-event-org, .table-box-title, .section-intro-title {
+    color: #000000 !important;
+  }
+  .executive-table thead th {
+    background: #f1f5f9 !important;
+    color: #334155 !important;
+  }
+  .executive-table tbody td {
+    color: #1e293b !important;
+  }
+}
